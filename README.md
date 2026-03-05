@@ -20,5 +20,5 @@ Contains animate.py, which creates an animation of the solution using the grid v
 2. **HLLC.cpp:** is the main logic of the solver, contains the methods used for the HLLC flux calculation at cell walls.
 3. **slope_limiters:** only contains the superbee slope limiter, logic behind the extrapolation of the state vector till the cell walls.
 4. **solver.cpp:** is everything put together, sets grid and initial conditions + BC, calculates CFL condition then the Euler time-steps. To calculate the time-step it first uses the superbee slope limiter to interpolate the state vector values at the cell walls, then uses the HLLC method to calculate the HLLC flux. After this, we get a new grid with
-$$ Q^{n+1} = Q^{n} + dt/dx (F^{n}_{i+1/2,j}-F^{n}_{i-1/2,j) + dt/dy(F^{n}_{i,j+1/2}-F^{n}_{i,j-1/2}) $$
+$$ Q^{n+1} = Q^{n} + dt/dx (F^{n}_{i+1/2,j}-F^{n}_{i-1/2,j}) + dt/dy(F^{n}_{i,j+1/2}-F^{n}_{i,j-1/2}) $$
 The new grid values are then saved in a binary file.

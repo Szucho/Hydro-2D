@@ -1,0 +1,32 @@
+# params.txt
+
+# Grid
+Nx      500
+Ny      5
+Nt      100
+t0      0.0
+tf      0.2
+xmin    -1.0
+xmax    1.0
+ymin    -3.0
+ymax    3.0
+
+# Physics
+gamma   1.4
+
+# Boundary conditions
+bc_left     Open
+bc_right    Open
+bc_top      Periodic
+bc_bottom   Periodic
+
+# Gas initial condition
+# profiles: uniform, Sod_x
+gas_profile     Sod_x
+gas_rho0        1
+gas_p0          1
+gas_u0          0.0
+gas_v0          0.0
+
+# Output
+outdir Sod_shock_tube

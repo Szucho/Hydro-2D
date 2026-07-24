@@ -19,6 +19,9 @@
   sigma_k superbee slope
 */
 
+double superbee_one(double qim1, double qi, double qip1, double dx);
 Vector sigma_superbee(const Vector& Qim1, const Vector& Qi, const Vector& Qip1, double dk);
-
+Vector sigma_van_leer(const Vector& Qim1, const Vector& Qi, const Vector& Qip1, double dk);
+Vector sigma_minmod(const Vector& Qim1, const Vector& Qi, const Vector& Qip1, double dk);
+double minmod_one(double qim1, double qi, double qip1, double dk);
 #endif // !SLOPELIM_H
